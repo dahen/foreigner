@@ -43,6 +43,16 @@ module Foreigner
           ForeignKeyDefinition.new(table_name, row['to_table'], options)
         end
       end
+
+      private
+      def foreign_key_name(table, column, options = {})
+     if options[:name]
+         options[:name]
+     else
+         "#{table}_#{column}_fkey"
+     end
+      end
+
     end
   end
 end
