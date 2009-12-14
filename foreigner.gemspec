@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
  
 Gem::Specification.new do |s|
-  s.name = %q{matthuhiggins-foreigner}
+  s.name = %q{dahens-foreigner}
   s.version = "0.3.1"
  
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Matthew Higgins"]
-  s.date = %q{2009-09-07}
-  s.email = %q{developer@matthewhiggins.com}
+  s.authors = ["Henrik Steensland"]
+  s.date = %q{2009-12-14}
+  s.email = %q{henrik.steensland@gmail.com}
   s.extra_rdoc_files = ["README"]
   s.files = %w(
     MIT-LICENSE
@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
     test/helper.rb
     test/mysql_adapter_test.rb
   )
-  s.homepage = "http://github.com/matthuhiggins/foreigner/tree/master"
+  s.homepage = "http://github.com/dahen/foreigner/tree/master"
   s.rdoc_options = ["--line-numbers", "--main", "README"]
   s.require_paths = %w(lib)
   s.rubygems_version = "1.3.4"
