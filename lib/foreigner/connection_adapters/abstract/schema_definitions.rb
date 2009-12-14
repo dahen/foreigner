@@ -110,6 +110,7 @@ module Foreigner
         # ====== Defining the column of the +to_table+.
         #  t.foreign_key(:people, :column => :sender_id, :primary_key => :person_id)
         def foreign_key(to_table, options = {})
+          to_table = to_table.to_s.pluralize if ActiveRecord::Base.pluralize_table_names
           @base.add_foreign_key(@table_name, to_table, options)
         end
     
@@ -143,6 +144,7 @@ module Foreigner
           fk_options = options.delete(:foreign_key)
 
           references_without_foreign_keys(*(args << options))
+          args.delete(options)
 
           if fk_options && !polymorphic
             fk_options = {} if fk_options == true
